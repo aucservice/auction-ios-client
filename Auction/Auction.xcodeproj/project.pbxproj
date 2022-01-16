@@ -11,6 +11,7 @@
 		D4D6ED4D2794AE4F00057A3F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6ED4C2794AE4F00057A3F /* LoginView.swift */; };
 		D4D6ED4F2794AE5000057A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D6ED4E2794AE5000057A3F /* Assets.xcassets */; };
 		D4D6ED522794AE5000057A3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D6ED512794AE5000057A3F /* Preview Assets.xcassets */; };
+		D4D6ED662794B4D000057A3F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6ED652794B4D000057A3F /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		D4D6ED4C2794AE4F00057A3F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D4D6ED4E2794AE5000057A3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4D6ED512794AE5000057A3F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D4D6ED652794B4D000057A3F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +106,8 @@
 		D4D6ED5C2794AEA100057A3F /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				D4D6ED602794AF6E00057A3F /* ViewModel */,
-				D4D6ED5F2794AF4100057A3F /* Views */,
+				D4D6ED622794B4A700057A3F /* SignUp */,
+				D4D6ED612794B49C00057A3F /* Login */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -133,6 +135,39 @@
 			sourceTree = "<group>";
 		};
 		D4D6ED602794AF6E00057A3F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D4D6ED612794B49C00057A3F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D4D6ED5F2794AF4100057A3F /* Views */,
+				D4D6ED602794AF6E00057A3F /* ViewModel */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D4D6ED622794B4A700057A3F /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				D4D6ED642794B4B800057A3F /* ViewModel */,
+				D4D6ED632794B4B000057A3F /* Views */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		D4D6ED632794B4B000057A3F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D4D6ED652794B4D000057A3F /* SignUpView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D4D6ED642794B4B800057A3F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -210,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4D6ED4D2794AE4F00057A3F /* LoginView.swift in Sources */,
+				D4D6ED662794B4D000057A3F /* SignUpView.swift in Sources */,
 				D4D6ED4B2794AE4F00057A3F /* AuctionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

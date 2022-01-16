@@ -11,7 +11,9 @@ import SwiftUI
 struct AuctionApp: App {
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            NavigationView {
+                SignUpView()
+            }
         }
     }
 }
