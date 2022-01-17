@@ -7,22 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		45E853BE27957D4B00099AFD /* ItemsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E853BD27957D4B00099AFD /* ItemsDetailView.swift */; };
-		45F3D7882795720A008F292B /* ItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F3D7872795720A008F292B /* ItemsView.swift */; };
+		D458FCC42796154C0067062E /* SignalRClient in Frameworks */ = {isa = PBXBuildFile; productRef = D458FCC32796154C0067062E /* SignalRClient */; };
+		D458FCC6279617470067062E /* ItemsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D458FCC5279617470067062E /* ItemsDetailView.swift */; };
+		D458FCC82796174C0067062E /* ItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D458FCC72796174C0067062E /* ItemsView.swift */; };
 		D4D6ED4B2794AE4F00057A3F /* AuctionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6ED4A2794AE4F00057A3F /* AuctionApp.swift */; };
 		D4D6ED4D2794AE4F00057A3F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6ED4C2794AE4F00057A3F /* LoginView.swift */; };
 		D4D6ED4F2794AE5000057A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D6ED4E2794AE5000057A3F /* Assets.xcassets */; };
 		D4D6ED522794AE5000057A3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D6ED512794AE5000057A3F /* Preview Assets.xcassets */; };
+		D4D6ED662794B4D000057A3F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6ED652794B4D000057A3F /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		45E853BD27957D4B00099AFD /* ItemsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsDetailView.swift; sourceTree = "<group>"; };
-		45F3D7872795720A008F292B /* ItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsView.swift; sourceTree = "<group>"; };
+		D458FCC5279617470067062E /* ItemsDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemsDetailView.swift; path = Auction/Home/ItemDetails/Views/ItemsDetailView.swift; sourceTree = SOURCE_ROOT; };
+		D458FCC72796174C0067062E /* ItemsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemsView.swift; path = Auction/Home/Views/ItemsView.swift; sourceTree = SOURCE_ROOT; };
 		D4D6ED472794AE4F00057A3F /* Auction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6ED4A2794AE4F00057A3F /* AuctionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionApp.swift; sourceTree = "<group>"; };
 		D4D6ED4C2794AE4F00057A3F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D4D6ED4E2794AE5000057A3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4D6ED512794AE5000057A3F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D4D6ED652794B4D000057A3F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,12 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D458FCC42796154C0067062E /* SignalRClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D458FCC9279617720067062E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D458FCC72796174C0067062E /* ItemsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D458FCCA279617820067062E /* ItemDetails */ = {
+			isa = PBXGroup;
+			children = (
+				D458FCCB279617900067062E /* Views */,
+			);
+			path = ItemDetails;
+			sourceTree = "<group>";
+		};
+		D458FCCB279617900067062E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D458FCC5279617470067062E /* ItemsDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D4D6ED3E2794AE4F00057A3F = {
 			isa = PBXGroup;
 			children = (
@@ -108,8 +136,8 @@
 		D4D6ED5C2794AEA100057A3F /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				D4D6ED602794AF6E00057A3F /* ViewModel */,
-				D4D6ED5F2794AF4100057A3F /* Views */,
+				D4D6ED622794B4A700057A3F /* SignUp */,
+				D4D6ED612794B49C00057A3F /* Login */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -117,6 +145,8 @@
 		D4D6ED5D2794AF0D00057A3F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D458FCCA279617820067062E /* ItemDetails */,
+				D458FCC9279617720067062E /* Views */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -132,13 +162,44 @@
 			isa = PBXGroup;
 			children = (
 				D4D6ED4C2794AE4F00057A3F /* LoginView.swift */,
-				45F3D7872795720A008F292B /* ItemsView.swift */,
-				45E853BD27957D4B00099AFD /* ItemsDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
 		D4D6ED602794AF6E00057A3F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D4D6ED612794B49C00057A3F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D4D6ED5F2794AF4100057A3F /* Views */,
+				D4D6ED602794AF6E00057A3F /* ViewModel */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D4D6ED622794B4A700057A3F /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				D4D6ED642794B4B800057A3F /* ViewModel */,
+				D4D6ED632794B4B000057A3F /* Views */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		D4D6ED632794B4B000057A3F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D4D6ED652794B4D000057A3F /* SignUpView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D4D6ED642794B4B800057A3F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -161,6 +222,9 @@
 			dependencies = (
 			);
 			name = Auction;
+			packageProductDependencies = (
+				D458FCC32796154C0067062E /* SignalRClient */,
+			);
 			productName = Auction;
 			productReference = D4D6ED472794AE4F00057A3F /* Auction.app */;
 			productType = "com.apple.product-type.application";
@@ -189,6 +253,9 @@
 				Base,
 			);
 			mainGroup = D4D6ED3E2794AE4F00057A3F;
+			packageReferences = (
+				D458FCC22796154C0067062E /* XCRemoteSwiftPackageReference "SignalR-Client-Swift" */,
+			);
 			productRefGroup = D4D6ED482794AE4F00057A3F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -215,9 +282,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45E853BE27957D4B00099AFD /* ItemsDetailView.swift in Sources */,
 				D4D6ED4D2794AE4F00057A3F /* LoginView.swift in Sources */,
-				45F3D7882795720A008F292B /* ItemsView.swift in Sources */,
+				D458FCC82796174C0067062E /* ItemsView.swift in Sources */,
+				D4D6ED662794B4D000057A3F /* SignUpView.swift in Sources */,
+				D458FCC6279617470067062E /* ItemsDetailView.swift in Sources */,
 				D4D6ED4B2794AE4F00057A3F /* AuctionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +489,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D458FCC22796154C0067062E /* XCRemoteSwiftPackageReference "SignalR-Client-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/moozzyk/SignalR-Client-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D458FCC32796154C0067062E /* SignalRClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D458FCC22796154C0067062E /* XCRemoteSwiftPackageReference "SignalR-Client-Swift" */;
+			productName = SignalRClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D4D6ED3F2794AE4F00057A3F /* Project object */;
 }
