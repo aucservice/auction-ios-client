@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D458FCC42796154C0067062E /* SignalRClient in Frameworks */ = {isa = PBXBuildFile; productRef = D458FCC32796154C0067062E /* SignalRClient */; };
 		D4D6ED4B2794AE4F00057A3F /* AuctionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6ED4A2794AE4F00057A3F /* AuctionApp.swift */; };
 		D4D6ED4D2794AE4F00057A3F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6ED4C2794AE4F00057A3F /* LoginView.swift */; };
 		D4D6ED4F2794AE5000057A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D6ED4E2794AE5000057A3F /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D458FCC42796154C0067062E /* SignalRClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +192,9 @@
 			dependencies = (
 			);
 			name = Auction;
+			packageProductDependencies = (
+				D458FCC32796154C0067062E /* SignalRClient */,
+			);
 			productName = Auction;
 			productReference = D4D6ED472794AE4F00057A3F /* Auction.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +223,9 @@
 				Base,
 			);
 			mainGroup = D4D6ED3E2794AE4F00057A3F;
+			packageReferences = (
+				D458FCC22796154C0067062E /* XCRemoteSwiftPackageReference "SignalR-Client-Swift" */,
+			);
 			productRefGroup = D4D6ED482794AE4F00057A3F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -449,6 +457,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D458FCC22796154C0067062E /* XCRemoteSwiftPackageReference "SignalR-Client-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/moozzyk/SignalR-Client-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D458FCC32796154C0067062E /* SignalRClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D458FCC22796154C0067062E /* XCRemoteSwiftPackageReference "SignalR-Client-Swift" */;
+			productName = SignalRClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D4D6ED3F2794AE4F00057A3F /* Project object */;
 }
