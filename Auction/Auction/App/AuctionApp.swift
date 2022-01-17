@@ -12,6 +12,7 @@ struct AuctionApp: App {
     var body: some Scene {
         WindowGroup {
             LoginView()
+            ItemsView()
         }
     }
 }
