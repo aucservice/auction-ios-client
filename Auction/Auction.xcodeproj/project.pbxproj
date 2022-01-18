@@ -21,6 +21,9 @@
 		D440087E279731DC009316B1 /* LoaderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440087D279731DC009316B1 /* LoaderButton.swift */; };
 		D440088227973353009316B1 /* AlertContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440088127973353009316B1 /* AlertContent.swift */; };
 		D4400884279738E7009316B1 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4400883279738E7009316B1 /* AuthResponse.swift */; };
+		D440088627973DB3009316B1 /* BidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440088527973DB3009316B1 /* BidModel.swift */; };
+		D440088827973E79009316B1 /* LotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440088727973E79009316B1 /* LotModel.swift */; };
+		D440088A27973F37009316B1 /* UserAndLotsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440088927973F37009316B1 /* UserAndLotsModel.swift */; };
 		D458FCC42796154C0067062E /* SignalRClient in Frameworks */ = {isa = PBXBuildFile; productRef = D458FCC32796154C0067062E /* SignalRClient */; };
 		D458FCC6279617470067062E /* ItemsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D458FCC5279617470067062E /* ItemsDetailView.swift */; };
 		D458FCC82796174C0067062E /* ItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D458FCC72796174C0067062E /* ItemsView.swift */; };
@@ -46,6 +49,9 @@
 		D440087D279731DC009316B1 /* LoaderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderButton.swift; sourceTree = "<group>"; };
 		D440088127973353009316B1 /* AlertContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertContent.swift; sourceTree = "<group>"; };
 		D4400883279738E7009316B1 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		D440088527973DB3009316B1 /* BidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidModel.swift; sourceTree = "<group>"; };
+		D440088727973E79009316B1 /* LotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotModel.swift; sourceTree = "<group>"; };
+		D440088927973F37009316B1 /* UserAndLotsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAndLotsModel.swift; sourceTree = "<group>"; };
 		D458FCC5279617470067062E /* ItemsDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemsDetailView.swift; path = Auction/Home/ItemDetails/Views/ItemsDetailView.swift; sourceTree = SOURCE_ROOT; };
 		D458FCC72796174C0067062E /* ItemsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemsView.swift; path = Auction/Home/Views/ItemsView.swift; sourceTree = SOURCE_ROOT; };
 		D4D6ED472794AE4F00057A3F /* Auction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auction.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +105,9 @@
 			children = (
 				D440088027973346009316B1 /* Alert */,
 				D4400873279724C1009316B1 /* Auth */,
+				D440088527973DB3009316B1 /* BidModel.swift */,
+				D440088727973E79009316B1 /* LotModel.swift */,
+				D440088927973F37009316B1 /* UserAndLotsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -398,13 +407,16 @@
 			files = (
 				D440088227973353009316B1 /* AlertContent.swift in Sources */,
 				D440086B27971F71009316B1 /* SignalRModels.swift in Sources */,
+				D440088827973E79009316B1 /* LotModel.swift in Sources */,
 				D4400870279724A7009316B1 /* LoginModel.swift in Sources */,
 				D4400884279738E7009316B1 /* AuthResponse.swift in Sources */,
 				D440086327971BFA009316B1 /* Endpoint.swift in Sources */,
+				D440088A27973F37009316B1 /* UserAndLotsModel.swift in Sources */,
 				D440087E279731DC009316B1 /* LoaderButton.swift in Sources */,
 				D4D6ED4D2794AE4F00057A3F /* LoginView.swift in Sources */,
 				D440087C279731CD009316B1 /* ProgressIndicator.swift in Sources */,
 				D4400876279728B7009316B1 /* AuthService.swift in Sources */,
+				D440088627973DB3009316B1 /* BidModel.swift in Sources */,
 				D458FCC82796174C0067062E /* ItemsView.swift in Sources */,
 				D440086627971D18009316B1 /* Dictionary+Extension.swift in Sources */,
 				D440086027971BB0009316B1 /* Network.swift in Sources */,
