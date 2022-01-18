@@ -33,7 +33,8 @@ final class Network {
         return URLSession.shared.dataTaskPublisher(for: request)
             .map({ (data, response) -> Data in
                 #if !(RELEASE)
-                debugPrint("request: \(request)\nresponse: \(response)\n")
+                debugPrint("request: \(request)")
+                debugPrint("response: \(response)\n")
                 #endif
                 return data
             })

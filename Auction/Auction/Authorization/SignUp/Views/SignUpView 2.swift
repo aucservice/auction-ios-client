@@ -8,16 +8,11 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @State private var username: String = ""
-    @State private var email: String = ""
-    @State private var password: String = ""
+    @State var username: String = ""
+    @State var email: String = ""
+    @State var password: String = ""
     
-    @State private var isLoginFlowActive: Bool = false
-    @State private var isLoading: Bool = false
-    
-    @State private var alertContent: AlertContent?
-    
-    @State private var isLoggedIn: Bool = false
+    @State var isLoginFlowActive: Bool = false
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -49,22 +44,15 @@ struct SignUpView: View {
             
             HStack {
                 Spacer()
-                LoaderButton(title: "Sign up",
-                             isEnabled: true,
-                             isLoading: $isLoading) {
-                    isLoading = true
-                    AuthService.shared.signUp(username: username,
-                                              password: password) { result in
-                        isLoading = false
-                        switch result {
-                        case .success:
-                            isLoggedIn = true
-                        case .failure(let error):
-                            alertContent = AlertContent(content: error.localizedDescription, completion: nil)
-                        }
-                    }
-                }
-
+                Button(action: {
+                    
+                }, label: {
+                    Text("Sign up")
+                })
+                    .frame(width: 90, height: 45)
+                    .padding(.top, 24)
+                    .foregroundColor(.brown)
+                    .buttonStyle(.bordered)
                 Spacer()
             }
             .padding(.top, 25)
@@ -83,23 +71,6 @@ struct SignUpView: View {
                 LoginView()
             },
                            label: { EmptyView() })
-        }
-        .alert(
-            item: $alertContent,
-            content: { alertContent in
-                Alert(
-                    title: Text(""),
-                    message: Text(alertContent.content),
-                    dismissButton: .default(
-                        Text("OK"),
-                        action: {
-                            alertContent.completion?()
-                        }))
-                
-            }
-        )
-        .fullScreenCover(isPresented: $isLoggedIn) {
-            ItemsView()
         }
     }
 }

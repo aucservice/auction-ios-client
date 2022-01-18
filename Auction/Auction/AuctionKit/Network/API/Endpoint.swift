@@ -9,16 +9,16 @@ import Foundation
 import UIKit
 
 struct Endpoint {
+    var baseURL: String
     var method: HTTPMethod
     var path: String
     var queryItems: [URLQueryItem]?
     var body: [String: Any]?
     var url: URL {
-      guard var components = URLComponents(string: "base url") else {
+      guard var components = URLComponents(string: baseURL + path) else {
             preconditionFailure("Invalid server URL")
         }
-
-        //components.path = "/api" + path
+        
         components.queryItems = queryItems
 
         guard let url = components.url else {
@@ -30,11 +30,7 @@ struct Endpoint {
     var headers: [String: Any] {
         var headers = [
             "Accept": "*/*",
-            "Accept-Encoding": "gzip",
-            "Content-Encoding": "gzip",
-            "Connection": "keep-alive",
             "Content-Type": "application/json",
-            "Web-Customer": "true",
             "Device": UIDevice.current.userInterfaceIdiom == .pad ? "ipad" : "ios_iphone"
         ]
 
