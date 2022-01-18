@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4534E48127974DE500F1DE18 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4534E48027974DE500F1DE18 /* ProfileView.swift */; };
 		D440086027971BB0009316B1 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440085F27971BB0009316B1 /* Network.swift */; };
 		D440086327971BFA009316B1 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440086227971BFA009316B1 /* Endpoint.swift */; };
 		D440086627971D18009316B1 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440086527971D18009316B1 /* Dictionary+Extension.swift */; };
@@ -33,10 +32,10 @@
 		D4D6ED4F2794AE5000057A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D6ED4E2794AE5000057A3F /* Assets.xcassets */; };
 		D4D6ED522794AE5000057A3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D6ED512794AE5000057A3F /* Preview Assets.xcassets */; };
 		D4D6ED662794B4D000057A3F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6ED652794B4D000057A3F /* SignUpView.swift */; };
+		D4E8403C27975D5200E28185 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E8403B27975D5200E28185 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4534E48027974DE500F1DE18 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D440085F27971BB0009316B1 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		D440086227971BFA009316B1 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		D440086527971D18009316B1 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
@@ -62,6 +61,7 @@
 		D4D6ED4E2794AE5000057A3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4D6ED512794AE5000057A3F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D4D6ED652794B4D000057A3F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		D4E8403B27975D5200E28185 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,13 +76,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4534E47F27974DD700F1DE18 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				4534E48027974DE500F1DE18 /* ProfileView.swift */,
-			);
-			path = Profile;
-        };
 		D440086127971BEE009316B1 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,7 +201,7 @@
 		D4D6ED492794AE4F00057A3F /* Auction */ = {
 			isa = PBXGroup;
 			children = (
-				4534E47F27974DD700F1DE18 /* Profile */,
+				D4E8403827975D2B00E28185 /* Profile */,
 				D4D6ED582794AE6500057A3F /* App */,
 				D4D6ED5A2794AE8600057A3F /* AuctionKit */,
 				D4D6ED5D2794AF0D00057A3F /* Home */,
@@ -331,6 +324,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		D4E8403827975D2B00E28185 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D4E8403B27975D5200E28185 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -423,12 +424,12 @@
 				D440086627971D18009316B1 /* Dictionary+Extension.swift in Sources */,
 				D440086027971BB0009316B1 /* Network.swift in Sources */,
 				D440087A279731AC009316B1 /* LoadingView.swift in Sources */,
+				D4E8403C27975D5200E28185 /* ProfileView.swift in Sources */,
 				D4D6ED662794B4D000057A3F /* SignUpView.swift in Sources */,
 				D440086D27972429009316B1 /* Endpoint+Auth.swift in Sources */,
 				D440086927971E6F009316B1 /* SignalRService.swift in Sources */,
 				D4400872279724B5009316B1 /* SignupModel.swift in Sources */,
 				D458FCC6279617470067062E /* ItemsDetailView.swift in Sources */,
-				4534E48127974DE500F1DE18 /* ProfileView.swift in Sources */,
 				D4D6ED4B2794AE4F00057A3F /* AuctionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
