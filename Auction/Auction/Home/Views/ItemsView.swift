@@ -12,6 +12,7 @@ struct ItemsView: View {
     @State var isDetailPresented: Bool = false
     
     var body: some View {
+        NavigationView {
         List(0..<20) { item in
             HStack {
                 Image("test_image")
@@ -47,7 +48,7 @@ struct ItemsView: View {
             ItemsDetailView()
         },
                        label: { EmptyView() })
-        
+        }
     }
 }
 
