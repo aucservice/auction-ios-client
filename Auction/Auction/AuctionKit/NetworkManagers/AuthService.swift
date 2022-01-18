@@ -23,6 +23,7 @@ class AuthService {
             .request { result in
                 switch result {
                 case .success(let response):
+                    UserDefaults.standard.set(response.token, forKey: "authToken")
                     debugPrint(response.message)
                     callback(.success(response.message))
                 case .failure(let error):
@@ -42,6 +43,7 @@ class AuthService {
             .request { result in
                 switch result {
                 case .success(let response):
+                    UserDefaults.standard.set(response.token, forKey: "authToken")
                     callback(.success(response.message))
                     debugPrint(response.message)
                 case .failure(let error):
