@@ -8,6 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		4534E48127974DE500F1DE18 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4534E48027974DE500F1DE18 /* ProfileView.swift */; };
+		D440086027971BB0009316B1 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440085F27971BB0009316B1 /* Network.swift */; };
+		D440086327971BFA009316B1 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440086227971BFA009316B1 /* Endpoint.swift */; };
+		D440086627971D18009316B1 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440086527971D18009316B1 /* Dictionary+Extension.swift */; };
+		D440086927971E6F009316B1 /* SignalRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440086827971E6F009316B1 /* SignalRService.swift */; };
+		D440086B27971F71009316B1 /* SignalRModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440086A27971F71009316B1 /* SignalRModels.swift */; };
+		D440086D27972429009316B1 /* Endpoint+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440086C27972429009316B1 /* Endpoint+Auth.swift */; };
+		D4400870279724A7009316B1 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440086F279724A7009316B1 /* LoginModel.swift */; };
+		D4400872279724B5009316B1 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4400871279724B5009316B1 /* SignupModel.swift */; };
+		D4400876279728B7009316B1 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4400875279728B7009316B1 /* AuthService.swift */; };
+		D440087A279731AC009316B1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4400879279731AC009316B1 /* LoadingView.swift */; };
+		D440087C279731CD009316B1 /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440087B279731CD009316B1 /* ProgressIndicator.swift */; };
+		D440087E279731DC009316B1 /* LoaderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440087D279731DC009316B1 /* LoaderButton.swift */; };
+		D440088227973353009316B1 /* AlertContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440088127973353009316B1 /* AlertContent.swift */; };
+		D4400884279738E7009316B1 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4400883279738E7009316B1 /* AuthResponse.swift */; };
+		D440088627973DB3009316B1 /* BidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440088527973DB3009316B1 /* BidModel.swift */; };
+		D440088827973E79009316B1 /* LotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440088727973E79009316B1 /* LotModel.swift */; };
+		D440088A27973F37009316B1 /* UserAndLotsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440088927973F37009316B1 /* UserAndLotsModel.swift */; };
 		D458FCC42796154C0067062E /* SignalRClient in Frameworks */ = {isa = PBXBuildFile; productRef = D458FCC32796154C0067062E /* SignalRClient */; };
 		D458FCC6279617470067062E /* ItemsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D458FCC5279617470067062E /* ItemsDetailView.swift */; };
 		D458FCC82796174C0067062E /* ItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D458FCC72796174C0067062E /* ItemsView.swift */; };
@@ -20,6 +37,23 @@
 
 /* Begin PBXFileReference section */
 		4534E48027974DE500F1DE18 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D440085F27971BB0009316B1 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		D440086227971BFA009316B1 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		D440086527971D18009316B1 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		D440086827971E6F009316B1 /* SignalRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalRService.swift; sourceTree = "<group>"; };
+		D440086A27971F71009316B1 /* SignalRModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalRModels.swift; sourceTree = "<group>"; };
+		D440086C27972429009316B1 /* Endpoint+Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+Auth.swift"; sourceTree = "<group>"; };
+		D440086F279724A7009316B1 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		D4400871279724B5009316B1 /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
+		D4400875279728B7009316B1 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		D4400879279731AC009316B1 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		D440087B279731CD009316B1 /* ProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
+		D440087D279731DC009316B1 /* LoaderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderButton.swift; sourceTree = "<group>"; };
+		D440088127973353009316B1 /* AlertContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertContent.swift; sourceTree = "<group>"; };
+		D4400883279738E7009316B1 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		D440088527973DB3009316B1 /* BidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidModel.swift; sourceTree = "<group>"; };
+		D440088727973E79009316B1 /* LotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotModel.swift; sourceTree = "<group>"; };
+		D440088927973F37009316B1 /* UserAndLotsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAndLotsModel.swift; sourceTree = "<group>"; };
 		D458FCC5279617470067062E /* ItemsDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemsDetailView.swift; path = Auction/Home/ItemDetails/Views/ItemsDetailView.swift; sourceTree = SOURCE_ROOT; };
 		D458FCC72796174C0067062E /* ItemsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemsView.swift; path = Auction/Home/Views/ItemsView.swift; sourceTree = SOURCE_ROOT; };
 		D4D6ED472794AE4F00057A3F /* Auction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auction.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +82,87 @@
 				4534E48027974DE500F1DE18 /* ProfileView.swift */,
 			);
 			path = Profile;
+        };
+		D440086127971BEE009316B1 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D440086227971BFA009316B1 /* Endpoint.swift */,
+				D440086C27972429009316B1 /* Endpoint+Auth.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		D440086427971D04009316B1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D440086527971D18009316B1 /* Dictionary+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D440086727971E45009316B1 /* SignalR */ = {
+			isa = PBXGroup;
+			children = (
+				D440086827971E6F009316B1 /* SignalRService.swift */,
+				D440086A27971F71009316B1 /* SignalRModels.swift */,
+			);
+			path = SignalR;
+			sourceTree = "<group>";
+		};
+		D440086E27972484009316B1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D440088027973346009316B1 /* Alert */,
+				D4400873279724C1009316B1 /* Auth */,
+				D440088527973DB3009316B1 /* BidModel.swift */,
+				D440088727973E79009316B1 /* LotModel.swift */,
+				D440088927973F37009316B1 /* UserAndLotsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D4400873279724C1009316B1 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				D440086F279724A7009316B1 /* LoginModel.swift */,
+				D4400871279724B5009316B1 /* SignupModel.swift */,
+				D4400883279738E7009316B1 /* AuthResponse.swift */,
+			);
+			name = Auth;
+			sourceTree = "<group>";
+		};
+		D4400874279728A9009316B1 /* NetworkManagers */ = {
+			isa = PBXGroup;
+			children = (
+				D4400875279728B7009316B1 /* AuthService.swift */,
+			);
+			path = NetworkManagers;
+			sourceTree = "<group>";
+		};
+		D44008772797318C009316B1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D44008782797319A009316B1 /* LoaderButton */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D44008782797319A009316B1 /* LoaderButton */ = {
+			isa = PBXGroup;
+			children = (
+				D4400879279731AC009316B1 /* LoadingView.swift */,
+				D440087B279731CD009316B1 /* ProgressIndicator.swift */,
+				D440087D279731DC009316B1 /* LoaderButton.swift */,
+			);
+			path = LoaderButton;
+			sourceTree = "<group>";
+		};
+		D440088027973346009316B1 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				D440088127973353009316B1 /* AlertContent.swift */,
+			);
+			name = Alert;
 			sourceTree = "<group>";
 		};
 		D458FCC9279617720067062E /* Views */ = {
@@ -131,6 +246,11 @@
 		D4D6ED5A2794AE8600057A3F /* AuctionKit */ = {
 			isa = PBXGroup;
 			children = (
+				D44008772797318C009316B1 /* UI */,
+				D4400874279728A9009316B1 /* NetworkManagers */,
+				D440086E27972484009316B1 /* Models */,
+				D440086727971E45009316B1 /* SignalR */,
+				D440086427971D04009316B1 /* Extensions */,
 				D4D6ED5B2794AE9900057A3F /* Network */,
 			);
 			path = AuctionKit;
@@ -139,6 +259,8 @@
 		D4D6ED5B2794AE9900057A3F /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D440086127971BEE009316B1 /* API */,
+				D440085F27971BB0009316B1 /* Network.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -285,9 +407,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D440088227973353009316B1 /* AlertContent.swift in Sources */,
+				D440086B27971F71009316B1 /* SignalRModels.swift in Sources */,
+				D440088827973E79009316B1 /* LotModel.swift in Sources */,
+				D4400870279724A7009316B1 /* LoginModel.swift in Sources */,
+				D4400884279738E7009316B1 /* AuthResponse.swift in Sources */,
+				D440086327971BFA009316B1 /* Endpoint.swift in Sources */,
+				D440088A27973F37009316B1 /* UserAndLotsModel.swift in Sources */,
+				D440087E279731DC009316B1 /* LoaderButton.swift in Sources */,
 				D4D6ED4D2794AE4F00057A3F /* LoginView.swift in Sources */,
+				D440087C279731CD009316B1 /* ProgressIndicator.swift in Sources */,
+				D4400876279728B7009316B1 /* AuthService.swift in Sources */,
+				D440088627973DB3009316B1 /* BidModel.swift in Sources */,
 				D458FCC82796174C0067062E /* ItemsView.swift in Sources */,
+				D440086627971D18009316B1 /* Dictionary+Extension.swift in Sources */,
+				D440086027971BB0009316B1 /* Network.swift in Sources */,
+				D440087A279731AC009316B1 /* LoadingView.swift in Sources */,
 				D4D6ED662794B4D000057A3F /* SignUpView.swift in Sources */,
+				D440086D27972429009316B1 /* Endpoint+Auth.swift in Sources */,
+				D440086927971E6F009316B1 /* SignalRService.swift in Sources */,
+				D4400872279724B5009316B1 /* SignupModel.swift in Sources */,
 				D458FCC6279617470067062E /* ItemsDetailView.swift in Sources */,
 				4534E48127974DE500F1DE18 /* ProfileView.swift in Sources */,
 				D4D6ED4B2794AE4F00057A3F /* AuctionApp.swift in Sources */,

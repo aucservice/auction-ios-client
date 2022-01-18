@@ -12,6 +12,13 @@ struct LoginView: View {
     @State var username: String = ""
     @State var password: String = ""
     
+    @State var isHomeViewActive: Bool = false
+    
+    @State var isLoading: Bool = false
+    @State var isLoggedIn: Bool = false
+    
+    @State var alertContent: AlertContent?
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             HStack {
@@ -30,7 +37,7 @@ struct LoginView: View {
                     .frame(height: 48)
                     .textFieldStyle(.roundedBorder)
                 
-                SecureField("Password", text: $username)
+                SecureField("Password", text: $password)
                     .frame(height: 48)
                     .textFieldStyle(.roundedBorder)
             }
@@ -38,19 +45,44 @@ struct LoginView: View {
             
             HStack {
                 Spacer()
-                Button(action: {
-                    
-                }, label: {
-                    Text("Login")
-                })
-                    .frame(height: 40)
-                    .padding(.top, 24)
-                    .foregroundColor(.brown)
-                    .buttonStyle(.bordered)
+                
+                LoaderButton(title: "Log in",
+                             isEnabled: true,
+                             isLoading: $isLoading) {
+                    isLoading = true
+                    AuthService.shared.login(username: username,
+                                              password: password) { result in
+                        isLoading = false
+                        switch result {
+                        case .success:
+                            isLoggedIn = true
+                        case .failure(let error):
+                            alertContent = AlertContent(content: error.localizedDescription, completion: nil)
+                        }
+                    }
+                }
+
                 Spacer()
             }
             .padding(.top, 25)
             .padding(.bottom, 30)
+        }
+        .alert(
+            item: $alertContent,
+            content: { alertContent in
+                Alert(
+                    title: Text(""),
+                    message: Text(alertContent.content),
+                    dismissButton: .default(
+                        Text("OK"),
+                        action: {
+                            alertContent.completion?()
+                        }))
+                
+            }
+        )
+        .fullScreenCover(isPresented: $isLoggedIn) {
+            ItemsView()
         }
     }
 }
