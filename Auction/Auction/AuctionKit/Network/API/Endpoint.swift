@@ -35,7 +35,7 @@ struct Endpoint {
         ]
 
         if let authToken = UserDefaults.standard.string(forKey: "authToken") {
-            headers["Authentication-Token"] = authToken
+            headers["Authorization"] = "Bearer \(authToken)"
         }
 
         return headers
