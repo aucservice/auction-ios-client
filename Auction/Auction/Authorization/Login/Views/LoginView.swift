@@ -12,6 +12,8 @@ struct LoginView: View {
     @State var username: String = ""
     @State var password: String = ""
     
+    @State var isHomeViewActive: Bool = false
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             HStack {
@@ -39,7 +41,7 @@ struct LoginView: View {
             HStack {
                 Spacer()
                 Button(action: {
-                    
+                    isHomeViewActive = true
                 }, label: {
                     Text("Login")
                 })
@@ -51,6 +53,12 @@ struct LoginView: View {
             }
             .padding(.top, 25)
             .padding(.bottom, 30)
+            
+            NavigationLink(isActive: $isHomeViewActive,
+                           destination: {
+                ItemsView()
+            },
+                           label: { EmptyView() })
         }
     }
 }

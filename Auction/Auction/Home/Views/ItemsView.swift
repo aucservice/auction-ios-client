@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct ItemsView: View {
+    
+    @State var isDetailPresented: Bool = false
+    
     var body: some View {
-        NavigationView {
             List(0..<20) { item in
                 HStack {
                     Image("test_image")
@@ -34,10 +36,20 @@ struct ItemsView: View {
                             .foregroundColor(.secondary)
                     }
                 }
+                .onTapGesture {
+                    self.isDetailPresented = true
+                }
             }
             .navigationTitle("NFT for sale")
+            
+            NavigationLink(isActive: $isDetailPresented,
+                           destination: {
+                ItemsDetailView()
+            },
+                           label: { EmptyView() })
+
         }
-    }
+    
 }
 
 struct ItemsView_Previews: PreviewProvider {
