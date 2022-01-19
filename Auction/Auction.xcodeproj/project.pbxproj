@@ -28,6 +28,7 @@
 		D458FCC6279617470067062E /* ItemsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D458FCC5279617470067062E /* ItemsDetailView.swift */; };
 		D458FCC82796174C0067062E /* ItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D458FCC72796174C0067062E /* ItemsView.swift */; };
 		D4B401B72797F21C009A74B2 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B401B62797F21C009A74B2 /* AppViewModel.swift */; };
+		D4B401BA2797F7AF009A74B2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D4B401B92797F7AF009A74B2 /* Kingfisher */; };
 		D4D6ED4B2794AE4F00057A3F /* AuctionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6ED4A2794AE4F00057A3F /* AuctionApp.swift */; };
 		D4D6ED4D2794AE4F00057A3F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6ED4C2794AE4F00057A3F /* LoginView.swift */; };
 		D4D6ED4F2794AE5000057A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D6ED4E2794AE5000057A3F /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B401BA2797F7AF009A74B2 /* Kingfisher in Frameworks */,
 				D458FCC42796154C0067062E /* SignalRClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,11 +213,11 @@
 		D4D6ED492794AE4F00057A3F /* Auction */ = {
 			isa = PBXGroup;
 			children = (
-				D4E8403827975D2B00E28185 /* Profile */,
 				D4D6ED582794AE6500057A3F /* App */,
 				D4D6ED5A2794AE8600057A3F /* AuctionKit */,
 				D4D6ED5D2794AF0D00057A3F /* Home */,
 				D4D6ED5C2794AEA100057A3F /* Authorization */,
+				D4E8403827975D2B00E28185 /* Profile */,
 				D4D6ED592794AE6E00057A3F /* Resources */,
 				D4D6ED502794AE5000057A3F /* Preview Content */,
 			);
@@ -361,6 +363,7 @@
 			name = Auction;
 			packageProductDependencies = (
 				D458FCC32796154C0067062E /* SignalRClient */,
+				D4B401B92797F7AF009A74B2 /* Kingfisher */,
 			);
 			productName = Auction;
 			productReference = D4D6ED472794AE4F00057A3F /* Auction.app */;
@@ -392,6 +395,7 @@
 			mainGroup = D4D6ED3E2794AE4F00057A3F;
 			packageReferences = (
 				D458FCC22796154C0067062E /* XCRemoteSwiftPackageReference "SignalR-Client-Swift" */,
+				D4B401B82797F7AF009A74B2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = D4D6ED482794AE4F00057A3F /* Products */;
 			projectDirPath = "";
@@ -655,6 +659,14 @@
 				minimumVersion = 0.9.0;
 			};
 		};
+		D4B401B82797F7AF009A74B2 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -662,6 +674,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D458FCC22796154C0067062E /* XCRemoteSwiftPackageReference "SignalR-Client-Swift" */;
 			productName = SignalRClient;
+		};
+		D4B401B92797F7AF009A74B2 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4B401B82797F7AF009A74B2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
