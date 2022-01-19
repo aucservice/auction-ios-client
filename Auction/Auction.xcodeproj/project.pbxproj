@@ -11,7 +11,6 @@
 		D440086327971BFA009316B1 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440086227971BFA009316B1 /* Endpoint.swift */; };
 		D440086627971D18009316B1 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440086527971D18009316B1 /* Dictionary+Extension.swift */; };
 		D440086927971E6F009316B1 /* SignalRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440086827971E6F009316B1 /* SignalRService.swift */; };
-		D440086B27971F71009316B1 /* SignalRModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440086A27971F71009316B1 /* SignalRModels.swift */; };
 		D440086D27972429009316B1 /* Endpoint+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440086C27972429009316B1 /* Endpoint+Auth.swift */; };
 		D4400870279724A7009316B1 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440086F279724A7009316B1 /* LoginModel.swift */; };
 		D4400872279724B5009316B1 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4400871279724B5009316B1 /* SignupModel.swift */; };
@@ -34,6 +33,7 @@
 		D4B401C02797FA7D009A74B2 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B401BF2797FA7D009A74B2 /* UserService.swift */; };
 		D4B401C22797FC14009A74B2 /* Endpoint+Lot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B401C12797FC14009A74B2 /* Endpoint+Lot.swift */; };
 		D4B401C42797FECD009A74B2 /* Endpoint+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B401C32797FECD009A74B2 /* Endpoint+User.swift */; };
+		D4B401C72798035B009A74B2 /* ItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B401C62798035B009A74B2 /* ItemsViewModel.swift */; };
 		D4D6ED4B2794AE4F00057A3F /* AuctionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6ED4A2794AE4F00057A3F /* AuctionApp.swift */; };
 		D4D6ED4D2794AE4F00057A3F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6ED4C2794AE4F00057A3F /* LoginView.swift */; };
 		D4D6ED4F2794AE5000057A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D6ED4E2794AE5000057A3F /* Assets.xcassets */; };
@@ -47,7 +47,6 @@
 		D440086227971BFA009316B1 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		D440086527971D18009316B1 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		D440086827971E6F009316B1 /* SignalRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalRService.swift; sourceTree = "<group>"; };
-		D440086A27971F71009316B1 /* SignalRModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalRModels.swift; sourceTree = "<group>"; };
 		D440086C27972429009316B1 /* Endpoint+Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+Auth.swift"; sourceTree = "<group>"; };
 		D440086F279724A7009316B1 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		D4400871279724B5009316B1 /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
@@ -68,6 +67,7 @@
 		D4B401BF2797FA7D009A74B2 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		D4B401C12797FC14009A74B2 /* Endpoint+Lot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+Lot.swift"; sourceTree = "<group>"; };
 		D4B401C32797FECD009A74B2 /* Endpoint+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+User.swift"; sourceTree = "<group>"; };
+		D4B401C62798035B009A74B2 /* ItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewModel.swift; sourceTree = "<group>"; };
 		D4D6ED472794AE4F00057A3F /* Auction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6ED4A2794AE4F00057A3F /* AuctionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionApp.swift; sourceTree = "<group>"; };
 		D4D6ED4C2794AE4F00057A3F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -113,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				D440086827971E6F009316B1 /* SignalRService.swift */,
-				D440086A27971F71009316B1 /* SignalRModels.swift */,
 			);
 			path = SignalR;
 			sourceTree = "<group>";
@@ -209,6 +208,14 @@
 			path = viewModels;
 			sourceTree = "<group>";
 		};
+		D4B401C527980348009A74B2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D4B401C62798035B009A74B2 /* ItemsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		D4D6ED3E2794AE4F00057A3F = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +305,7 @@
 		D4D6ED5D2794AF0D00057A3F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D4B401C527980348009A74B2 /* ViewModels */,
 				D458FCCA279617820067062E /* ItemDetails */,
 				D458FCC9279617720067062E /* Views */,
 			);
@@ -440,7 +448,6 @@
 			files = (
 				D4B401C22797FC14009A74B2 /* Endpoint+Lot.swift in Sources */,
 				D440088227973353009316B1 /* AlertContent.swift in Sources */,
-				D440086B27971F71009316B1 /* SignalRModels.swift in Sources */,
 				D4B401C02797FA7D009A74B2 /* UserService.swift in Sources */,
 				D4B401B72797F21C009A74B2 /* AppViewModel.swift in Sources */,
 				D440088827973E79009316B1 /* LotModel.swift in Sources */,
@@ -458,6 +465,7 @@
 				D458FCC82796174C0067062E /* ItemsView.swift in Sources */,
 				D440086627971D18009316B1 /* Dictionary+Extension.swift in Sources */,
 				D440086027971BB0009316B1 /* Network.swift in Sources */,
+				D4B401C72798035B009A74B2 /* ItemsViewModel.swift in Sources */,
 				D440087A279731AC009316B1 /* LoadingView.swift in Sources */,
 				D4E8403C27975D5200E28185 /* ProfileView.swift in Sources */,
 				D4B401C42797FECD009A74B2 /* Endpoint+User.swift in Sources */,

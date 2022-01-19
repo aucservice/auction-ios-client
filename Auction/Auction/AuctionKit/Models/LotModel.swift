@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import SwiftUI
 
-struct LotModel: Codable {
+struct LotModel: Codable, Identifiable {
     var id: String
     var title: String
     var imageURL: String
