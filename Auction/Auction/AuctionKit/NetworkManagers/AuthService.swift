@@ -24,6 +24,7 @@ class AuthService {
                 switch result {
                 case .success(let response):
                     UserDefaults.standard.set(response.token, forKey: "authToken")
+                    UserDefaults.standard.set(true, forKey: "isLoggedIn")
                     debugPrint(response.message)
                     callback(.success(response.message))
                 case .failure(let error):
@@ -44,6 +45,7 @@ class AuthService {
                 switch result {
                 case .success(let response):
                     UserDefaults.standard.set(response.token, forKey: "authToken")
+                    UserDefaults.standard.set(true, forKey: "isLoggedIn")
                     callback(.success(response.message))
                     debugPrint(response.message)
                 case .failure(let error):

@@ -27,6 +27,7 @@
 		D458FCC42796154C0067062E /* SignalRClient in Frameworks */ = {isa = PBXBuildFile; productRef = D458FCC32796154C0067062E /* SignalRClient */; };
 		D458FCC6279617470067062E /* ItemsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D458FCC5279617470067062E /* ItemsDetailView.swift */; };
 		D458FCC82796174C0067062E /* ItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D458FCC72796174C0067062E /* ItemsView.swift */; };
+		D4B401B72797F21C009A74B2 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B401B62797F21C009A74B2 /* AppViewModel.swift */; };
 		D4D6ED4B2794AE4F00057A3F /* AuctionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6ED4A2794AE4F00057A3F /* AuctionApp.swift */; };
 		D4D6ED4D2794AE4F00057A3F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6ED4C2794AE4F00057A3F /* LoginView.swift */; };
 		D4D6ED4F2794AE5000057A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D6ED4E2794AE5000057A3F /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		D440088927973F37009316B1 /* UserAndLotsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAndLotsModel.swift; sourceTree = "<group>"; };
 		D458FCC5279617470067062E /* ItemsDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemsDetailView.swift; path = Auction/Home/ItemDetails/Views/ItemsDetailView.swift; sourceTree = SOURCE_ROOT; };
 		D458FCC72796174C0067062E /* ItemsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemsView.swift; path = Auction/Home/Views/ItemsView.swift; sourceTree = SOURCE_ROOT; };
+		D4B401B62797F21C009A74B2 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		D4D6ED472794AE4F00057A3F /* Auction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6ED4A2794AE4F00057A3F /* AuctionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionApp.swift; sourceTree = "<group>"; };
 		D4D6ED4C2794AE4F00057A3F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -182,6 +184,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		D4B401B52797F20B009A74B2 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D4B401B62797F21C009A74B2 /* AppViewModel.swift */,
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
 		D4D6ED3E2794AE4F00057A3F = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +233,7 @@
 		D4D6ED582794AE6500057A3F /* App */ = {
 			isa = PBXGroup;
 			children = (
+				D4B401B52797F20B009A74B2 /* viewModels */,
 				D4D6ED4A2794AE4F00057A3F /* AuctionApp.swift */,
 			);
 			path = App;
@@ -410,6 +421,7 @@
 			files = (
 				D440088227973353009316B1 /* AlertContent.swift in Sources */,
 				D440086B27971F71009316B1 /* SignalRModels.swift in Sources */,
+				D4B401B72797F21C009A74B2 /* AppViewModel.swift in Sources */,
 				D440088827973E79009316B1 /* LotModel.swift in Sources */,
 				D4400870279724A7009316B1 /* LoginModel.swift in Sources */,
 				D4400884279738E7009316B1 /* AuthResponse.swift in Sources */,
