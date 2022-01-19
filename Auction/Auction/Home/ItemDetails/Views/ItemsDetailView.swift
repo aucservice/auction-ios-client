@@ -11,13 +11,19 @@ struct ItemsDetailView: View {
     @EnvironmentObject var appViewModel: AppViewModel
     
     @StateObject var viewModel: ItemDetailsViewModel
+    
+    @State var bet: Int = 0
+    
+    let minBet: Int
+    
     let lotId: String
-    init(lotId: String) {
+    
+    init(lotId: String, bet: Int) {
         self.lotId = lotId
+        self.minBet = bet
+        self.bet = bet
         self._viewModel = StateObject(wrappedValue: ItemDetailsViewModel())
     }
-    
-    @State var bet: Int = 100
     
     var body: some View {
         VStack {
@@ -43,7 +49,7 @@ struct ItemsDetailView: View {
             HStack {
                 Spacer()
                 
-                Stepper(" $\(bet)", value: $bet, in: 0...100000, step: 10)
+                Stepper(" $\(bet)", value: $bet, in: minBet...100000, step: 10)
                 
                 Spacer()
             }
@@ -74,6 +80,6 @@ struct ItemsDetailView: View {
 
 struct ItemsDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemsDetailView(lotId: "")
+        ItemsDetailView(lotId: "", bet: 100)
     }
 }

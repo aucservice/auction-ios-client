@@ -11,8 +11,6 @@ struct ProfileView: View {
     
     @EnvironmentObject var appViewModel: AppViewModel
     
-    @State var bet: Int = 0
-    
     var body: some View {
         
         VStack {
@@ -46,6 +44,9 @@ struct ProfileView: View {
                     }
                 }
             }
+        }
+        .onAppear {
+            appViewModel.getCurrentUser()
         }
     }
 }

@@ -19,7 +19,7 @@ struct ItemsView: View {
     var body: some View {
             List(appViewModel.allLots) { item in
                 NavigationLink(destination: {
-                    ItemsDetailView(lotId: item.id)
+                    ItemsDetailView(lotId: item.id, bet: item.price)
                 }, label: {
                     HStack {
                         KingfisherImage(urlString: item.imageURL)
@@ -45,7 +45,7 @@ struct ItemsView: View {
             .navigationTitle("NFT for sale")
         }
         .onChange(of: viewModel.lotsList) { newValue in
-            self.appViewModel.allLots = newValue
+            self.appViewModel.allLots = newValue.map { LotModelMapper(api: $0) }
         }
     }
 }

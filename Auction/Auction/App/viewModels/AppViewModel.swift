@@ -24,7 +24,7 @@ class AppViewModel: ObservableObject {
     
     @Published var allUsers = [String]()
     
-    @Published var allLots = [LotModel]()
+    @Published var allLots = [LotModelMapper]()
     
     @Published var selectedTab: TabBarSection = .list
     
@@ -54,6 +54,10 @@ class AppViewModel: ObservableObject {
         
         signalRService.lotsHasChanged = { lots in
             self.allLots = lots
+        }
+        
+        signalRService.lotsBidIsOver = { lotId in
+            self.allLots.removeAll(where: { $0.id == lotId })
         }
     }
     

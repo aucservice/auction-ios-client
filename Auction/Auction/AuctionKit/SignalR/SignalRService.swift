@@ -13,11 +13,13 @@ final class SignalRService {
     
     private var connection: HubConnection?
     
-    private var allLots = [LotModel]()
+    private var allLots = [LotModelMapper]()
     
     private var allUsers = [UserModel]()
     
-    var lotsHasChanged: (([LotModel]) -> Void)? = nil
+    var lotsHasChanged: (([LotModelMapper]) -> Void)? = nil
+    
+    var lotsBidIsOver: ((String) -> Void)? = nil
     
     init() {
         if let url = URL(string: "https://auc-service.herokuapp.com/auctionhub") {
@@ -34,9 +36,9 @@ final class SignalRService {
             }
             
             // lot is over
-            connection?.on(method: "bid-end") { (lotId: String) in
+            connection?.on(method: "bid-end") { (username: String, lotId: String) in
                 do {
-                    self.handleLotOver(lotId: lotId)
+                    self.handleLotOver(username: username, lotId: lotId)
                 } catch let error {
                     print(error.localizedDescription)
                 }
@@ -52,20 +54,21 @@ final class SignalRService {
             return
         }
         
-        allLots[lotIdx] = LotModel(id: lot.id, title: lot.title, imageURL: lot.imageURL, description: lot.description, bidEnd: lot.bidEnd, price: price)
+        allLots[lotIdx] = LotModelMapper(id: lot.id, title: lot.title, imageUrl: lot.imageURL, description: lot.description, bidEnd: lot.bidEnd, price: price)
         lotsHasChanged!(allLots)
         LocalNotification.shared.sendNotification(name: lot.title, price: price, username: user.username)
     }
     
-    func handleLotOver(lotId: String) {
+    func handleLotOver(username: String, lotId: String) {
         guard let lot = allLots.first(where: { $0.id == lotId })
         else {
             return
         }
+        lotsBidIsOver!(lotId)
         LocalNotification.shared.bidOver(lotName: lot.title)
     }
     
-    func handleLotsUpdate(lots: [LotModel]) {
+    func handleLotsUpdate(lots: [LotModelMapper]) {
         self.allLots = lots
     }
     
