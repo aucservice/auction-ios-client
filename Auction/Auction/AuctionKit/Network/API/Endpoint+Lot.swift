@@ -11,23 +11,34 @@ import Foundation
 extension Endpoint {
     
     static func makeBid(username: String, lotId: String, price: Int) -> Self {
-        return Endpoint(baseURL: "baseURL",
+        guard let authToken = UserDefaults.standard.string(forKey: "authToken")
+        else {
+            return Endpoint(baseURL: "https://auc-service.herokuapp.com",
+                            method: .post,
+                            path: "/Auction/bid",
+                            body: ["name" : username,
+                                   "lotId" : lotId,
+                                   "amount" : price])
+        }
+        return Endpoint(baseURL: "https://auc-service.herokuapp.com",
                         method: .post,
                         path: "/Auction/bid",
-                        body: ["username" : username,
+                        body: ["name" : username,
                                "lotId" : lotId,
-                               "amount" : price])
+                               "amount" : price,
+                               "token" : authToken])
     }
     
     static func getLot(by id: String) -> Self {
-        return Endpoint(baseURL: "baseURL",
+        let query =  ["lotId" : id]
+        return Endpoint(baseURL: "https://auc-service.herokuapp.com",
                         method: .get,
                         path: "/Auction/lot",
-                        body: ["lotId" : id])
+                        queryItems: query.queryItems)
     }
     
     static func getAllLots() -> Self {
-        return Endpoint(baseURL: "baseUrl",
+        return Endpoint(baseURL: "https://auc-service.herokuapp.com",
                         method: .get,
                         path: "/Auction/lots")
     }

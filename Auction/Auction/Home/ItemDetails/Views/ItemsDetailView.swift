@@ -8,78 +8,72 @@
 import SwiftUI
 
 struct ItemsDetailView: View {
+    @EnvironmentObject var appViewModel: AppViewModel
     
-    @State var bet: Int = 0
+    @StateObject var viewModel: ItemDetailsViewModel
+    let lotId: String
+    init(lotId: String) {
+        self.lotId = lotId
+        self._viewModel = StateObject(wrappedValue: ItemDetailsViewModel())
+    }
+    
+    @State var bet: Int = 100
     
     var body: some View {
         VStack {
             HStack{
-                Image("test_image")
+                KingfisherImage(urlString: viewModel.itemModel.imageURL)
                     .resizable()
                     .scaledToFit()
                     .frame(alignment: .topLeading)
             }
             
-            Text("Game Title")
+            Text(viewModel.itemModel.title)
                 .font(.title)
                 .fontWeight(.semibold)
                 .lineLimit(2)
                 .multilineTextAlignment(.center)
                 .padding(5)
             
-            Text("by J. Williams")
-                .font(.headline)
-                .fontWeight(.regular)
-                .lineLimit(2)
-                .multilineTextAlignment(.center)
-                .padding(.vertical, 20)
-            
-            Text("$100")
-                .font(.title)
-                .fontWeight(.bold)
-                .lineLimit(2)
-                .multilineTextAlignment(.center)
-                .padding(.vertical, 5)
-            
-            Text("last bet by Ryan Gosling")
-//                .font(.headline)
-                .font(.italic(.headline)())
-                .fontWeight(.light)
-                .lineLimit(2)
-                .multilineTextAlignment(.center)
-                
-            
-            Text("There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle.")
+            Text(viewModel.itemModel.description)
                 .font(.body)
                 .multilineTextAlignment(.leading)
                 .padding()
             
             HStack {
+                Spacer()
+                
                 Stepper(" $\(bet)", value: $bet, in: 0...100000, step: 10)
-            }.padding(.horizontal, 130)
+                
+                Spacer()
+            }
             
             HStack {
                 Spacer()
+                
                 Button(action: {
-                    
+                    viewModel.makeBid(price: bet)
                 }, label: {
                     Text("Place a Bet")
                         .font(.title2)
-                        
                 })
                     .frame(height: 40)
                     .padding(.top, 40)
                     .foregroundColor(.blue)
                     .buttonStyle(.bordered)
+                
                 Spacer()
             }
             .padding(.horizontal)
+        }
+        .onAppear {
+            viewModel.fetchItemDetail(id: lotId)
         }
     }
 }
 
 struct ItemsDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemsDetailView()
+        ItemsDetailView(lotId: "")
     }
 }

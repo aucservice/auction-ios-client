@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct LotModel: Codable, Identifiable {
+struct LotModel: Codable, Identifiable, Equatable {
     var id: String
     var title: String
     var imageURL: String
@@ -18,7 +18,7 @@ struct LotModel: Codable, Identifiable {
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case title = "title"
-        case imageURL = "tmageUrl"
+        case imageURL = "image_url"
         case description = "description"
         case bidEnd = "bidding_end"
     }

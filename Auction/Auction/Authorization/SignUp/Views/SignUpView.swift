@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import Combine
 
 struct SignUpView: View {
+    @EnvironmentObject var appViewModel: AppViewModel
+    
     @State private var username: String = ""
     @State private var email: String = ""
     @State private var password: String = ""
@@ -58,6 +61,8 @@ struct SignUpView: View {
                         isLoading = false
                         switch result {
                         case .success:
+                            UserDefaults.standard.set(username, forKey: "username")
+                            appViewModel.currentUser.username = username
                             isLoggedIn = true
                         case .failure(let error):
                             alertContent = AlertContent(content: error.localizedDescription, completion: nil)
@@ -81,6 +86,7 @@ struct SignUpView: View {
             NavigationLink(isActive: $isLoginFlowActive,
                            destination: {
                 LoginView()
+                    .environmentObject(appViewModel)
             },
                            label: { EmptyView() })
         }
@@ -100,6 +106,7 @@ struct SignUpView: View {
         )
         .fullScreenCover(isPresented: $isLoggedIn) {
             ItemsView()
+                .environmentObject(appViewModel)
         }
     }
 }

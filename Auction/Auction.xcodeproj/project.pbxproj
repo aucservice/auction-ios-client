@@ -34,6 +34,9 @@
 		D4B401C22797FC14009A74B2 /* Endpoint+Lot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B401C12797FC14009A74B2 /* Endpoint+Lot.swift */; };
 		D4B401C42797FECD009A74B2 /* Endpoint+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B401C32797FECD009A74B2 /* Endpoint+User.swift */; };
 		D4B401C72798035B009A74B2 /* ItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B401C62798035B009A74B2 /* ItemsViewModel.swift */; };
+		D4B401CA279807E2009A74B2 /* ItemDetailsViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B401C9279807E2009A74B2 /* ItemDetailsViewModels.swift */; };
+		D4B401CD27980F02009A74B2 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B401CC27980F02009A74B2 /* AsyncImage.swift */; };
+		D4D0D2362798194D00FD6A0B /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D0D2352798194D00FD6A0B /* NotificationService.swift */; };
 		D4D6ED4B2794AE4F00057A3F /* AuctionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6ED4A2794AE4F00057A3F /* AuctionApp.swift */; };
 		D4D6ED4D2794AE4F00057A3F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6ED4C2794AE4F00057A3F /* LoginView.swift */; };
 		D4D6ED4F2794AE5000057A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D6ED4E2794AE5000057A3F /* Assets.xcassets */; };
@@ -68,6 +71,9 @@
 		D4B401C12797FC14009A74B2 /* Endpoint+Lot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+Lot.swift"; sourceTree = "<group>"; };
 		D4B401C32797FECD009A74B2 /* Endpoint+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+User.swift"; sourceTree = "<group>"; };
 		D4B401C62798035B009A74B2 /* ItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewModel.swift; sourceTree = "<group>"; };
+		D4B401C9279807E2009A74B2 /* ItemDetailsViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewModels.swift; sourceTree = "<group>"; };
+		D4B401CC27980F02009A74B2 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		D4D0D2352798194D00FD6A0B /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		D4D6ED472794AE4F00057A3F /* Auction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6ED4A2794AE4F00057A3F /* AuctionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionApp.swift; sourceTree = "<group>"; };
 		D4D6ED4C2794AE4F00057A3F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -153,6 +159,7 @@
 		D44008772797318C009316B1 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				D4B401CB27980EEC009A74B2 /* AyncImage */,
 				D44008782797319A009316B1 /* LoaderButton */,
 			);
 			path = UI;
@@ -187,6 +194,7 @@
 		D458FCCA279617820067062E /* ItemDetails */ = {
 			isa = PBXGroup;
 			children = (
+				D4B401C8279807C8009A74B2 /* ViewModels */,
 				D458FCCB279617900067062E /* Views */,
 			);
 			path = ItemDetails;
@@ -214,6 +222,30 @@
 				D4B401C62798035B009A74B2 /* ItemsViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D4B401C8279807C8009A74B2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D4B401C9279807E2009A74B2 /* ItemDetailsViewModels.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D4B401CB27980EEC009A74B2 /* AyncImage */ = {
+			isa = PBXGroup;
+			children = (
+				D4B401CC27980F02009A74B2 /* AsyncImage.swift */,
+			);
+			path = AyncImage;
+			sourceTree = "<group>";
+		};
+		D4B401CE279818D0009A74B2 /* NotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				D4D0D2352798194D00FD6A0B /* NotificationService.swift */,
+			);
+			path = NotificationService;
 			sourceTree = "<group>";
 		};
 		D4D6ED3E2794AE4F00057A3F = {
@@ -274,6 +306,7 @@
 		D4D6ED5A2794AE8600057A3F /* AuctionKit */ = {
 			isa = PBXGroup;
 			children = (
+				D4B401CE279818D0009A74B2 /* NotificationService */,
 				D44008772797318C009316B1 /* UI */,
 				D4400874279728A9009316B1 /* Services */,
 				D440086E27972484009316B1 /* Models */,
@@ -452,11 +485,13 @@
 				D4B401B72797F21C009A74B2 /* AppViewModel.swift in Sources */,
 				D440088827973E79009316B1 /* LotModel.swift in Sources */,
 				D4400870279724A7009316B1 /* LoginModel.swift in Sources */,
+				D4B401CA279807E2009A74B2 /* ItemDetailsViewModels.swift in Sources */,
 				D4400884279738E7009316B1 /* AuthResponse.swift in Sources */,
 				D440086327971BFA009316B1 /* Endpoint.swift in Sources */,
 				D440088A27973F37009316B1 /* UserAndLotsModel.swift in Sources */,
 				D4B401BC2797F89F009A74B2 /* UserModel.swift in Sources */,
 				D440087E279731DC009316B1 /* LoaderButton.swift in Sources */,
+				D4D0D2362798194D00FD6A0B /* NotificationService.swift in Sources */,
 				D4D6ED4D2794AE4F00057A3F /* LoginView.swift in Sources */,
 				D440087C279731CD009316B1 /* ProgressIndicator.swift in Sources */,
 				D4400876279728B7009316B1 /* AuthService.swift in Sources */,
@@ -464,6 +499,7 @@
 				D440088627973DB3009316B1 /* BidModel.swift in Sources */,
 				D458FCC82796174C0067062E /* ItemsView.swift in Sources */,
 				D440086627971D18009316B1 /* Dictionary+Extension.swift in Sources */,
+				D4B401CD27980F02009A74B2 /* AsyncImage.swift in Sources */,
 				D440086027971BB0009316B1 /* Network.swift in Sources */,
 				D4B401C72798035B009A74B2 /* ItemsViewModel.swift in Sources */,
 				D440087A279731AC009316B1 /* LoadingView.swift in Sources */,

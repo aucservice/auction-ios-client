@@ -9,6 +9,7 @@ import SwiftUI
 import Combine
 
 struct ItemsView: View {
+    @EnvironmentObject var appViewModel: AppViewModel
     @StateObject var viewModel: ItemsViewModel
     
     init() {
@@ -19,14 +20,13 @@ struct ItemsView: View {
         NavigationView {
             List(viewModel.lotsList) { item in
                 NavigationLink(destination: {
-                    ItemsDetailView()
+                    ItemsDetailView(lotId: item.id)
                 }, label: {
                     HStack {
-                        // TODO: - refactor to using Kingfisher
-                        Image("")
+                        KingfisherImage(urlString: item.imageURL)
                             .resizable()
                             .scaledToFit()
-                            .frame(height: 70)
+                            .frame( width: 100, height: 70)
                             .cornerRadius(4)
                             .padding(.vertical, 5)
                         
@@ -40,9 +40,6 @@ struct ItemsView: View {
                                 .fontWeight(.semibold)
                                 .lineLimit(1)
                                 .minimumScaleFactor(0.5)
-                            Text(item.description)
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
                         }
                     }
                 })
@@ -51,6 +48,9 @@ struct ItemsView: View {
         }
         .onAppear {
             viewModel.fetchAllLots()
+        }
+        .onChange(of: viewModel.lotsList) { newValue in
+            self.appViewModel.allLots = newValue
         }
     }
 }

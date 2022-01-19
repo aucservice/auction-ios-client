@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
+    @EnvironmentObject var appViewModel: AppViewModel
     
     @State var username: String = ""
     @State var password: String = ""
@@ -55,6 +56,8 @@ struct LoginView: View {
                         isLoading = false
                         switch result {
                         case .success:
+                            UserDefaults.standard.set(username, forKey: "username")
+                            appViewModel.currentUser.username = username
                             isLoggedIn = true
                         case .failure(let error):
                             alertContent = AlertContent(content: error.localizedDescription, completion: nil)
@@ -83,6 +86,7 @@ struct LoginView: View {
         )
         .fullScreenCover(isPresented: $isLoggedIn) {
             ItemsView()
+                .environmentObject(appViewModel)
         }
     }
 }

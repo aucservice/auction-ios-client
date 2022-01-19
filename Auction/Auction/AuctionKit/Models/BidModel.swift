@@ -14,7 +14,7 @@ struct BidModel: Codable {
     var time: Int
     
     enum CodingKeys: String, CodingKey {
-        case lotId = "lot_Id"
+        case lotId = "lot_id"
         case userName = "username"
         case price = "amount"
         case time = "timestamp"
