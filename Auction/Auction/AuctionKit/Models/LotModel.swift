@@ -8,17 +8,17 @@
 import Foundation
 
 struct LotModel: Codable {
-    var id: Int
+    var id: String
     var title: String
     var imageURL: String
     var description: String
     var bidEnd: Int
     
     enum CodingKeys: String, CodingKey {
-        case id = "Id"
-        case title = "Title"
-        case imageURL = "ImageUrl"
-        case description = "Description"
-        case bidEnd = "Bidding_end"
+        case id = "id"
+        case title = "title"
+        case imageURL = "tmageUrl"
+        case description = "description"
+        case bidEnd = "bidding_end"
     }
 }
