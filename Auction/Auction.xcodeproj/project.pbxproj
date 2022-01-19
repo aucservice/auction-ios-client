@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45A61D38279809F40083CDF7 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A61D37279809F40083CDF7 /* ProfileViewModel.swift */; };
 		D440086027971BB0009316B1 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440085F27971BB0009316B1 /* Network.swift */; };
 		D440086327971BFA009316B1 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440086227971BFA009316B1 /* Endpoint.swift */; };
 		D440086627971D18009316B1 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440086527971D18009316B1 /* Dictionary+Extension.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45A61D37279809F40083CDF7 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		D440085F27971BB0009316B1 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		D440086227971BFA009316B1 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		D440086527971D18009316B1 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
@@ -90,6 +92,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45FFBE23279808DA008767BE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				45A61D37279809F40083CDF7 /* ProfileViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		45FFBE24279808E4008767BE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D4E8403B27975D5200E28185 /* ProfileView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D440086127971BEE009316B1 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,7 +381,8 @@
 		D4E8403827975D2B00E28185 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				D4E8403B27975D5200E28185 /* ProfileView.swift */,
+				45FFBE24279808E4008767BE /* Views */,
+				45FFBE23279808DA008767BE /* ViewModels */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -470,6 +489,7 @@
 				D4E8403C27975D5200E28185 /* ProfileView.swift in Sources */,
 				D4B401C42797FECD009A74B2 /* Endpoint+User.swift in Sources */,
 				D4D6ED662794B4D000057A3F /* SignUpView.swift in Sources */,
+				45A61D38279809F40083CDF7 /* ProfileViewModel.swift in Sources */,
 				D440086D27972429009316B1 /* Endpoint+Auth.swift in Sources */,
 				D440086927971E6F009316B1 /* SignalRService.swift in Sources */,
 				D4400872279724B5009316B1 /* SignupModel.swift in Sources */,
