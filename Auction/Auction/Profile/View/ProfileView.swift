@@ -9,26 +9,29 @@ import SwiftUI
 
 struct ProfileView: View {
     
+    @EnvironmentObject var appViewModel: AppViewModel
+    
     @State var bet: Int = 0
     
     var body: some View {
         
         VStack {
-            Text("Your Name")
+            Text(appViewModel.currentUser.username)
                 .font(.title)
                 .fontWeight(.semibold)
                 .lineLimit(2)
                 .multilineTextAlignment(.center)
                 .padding(2)
+            
             Text("Your Lots")
                 .font(.title)
                 .fontWeight(.semibold)
                 .lineLimit(2)
                 .multilineTextAlignment(.center)
             
-            List(0..<20) { item in
+            List(appViewModel.currentUser.lots) { item in
                 HStack {
-                    Image("test_image")
+                    KingfisherImage(urlString: item.imageURL)
                         .resizable()
                         .scaledToFit()
                         .frame(height: 70)
@@ -36,13 +39,9 @@ struct ProfileView: View {
                         .padding(.vertical, 5)
                     
                     VStack(alignment: .leading, spacing: 5) {
-                        Text("Name of picture")
+                        Text(item.title)
                             .fontWeight(.semibold)
                             .lineLimit(2)
-                            .minimumScaleFactor(0.5)
-                        Text("$100")
-                            .fontWeight(.semibold)
-                            .lineLimit(1)
                             .minimumScaleFactor(0.5)
                     }
                 }

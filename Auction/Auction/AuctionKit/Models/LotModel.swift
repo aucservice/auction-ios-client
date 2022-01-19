@@ -14,6 +14,7 @@ struct LotModel: Codable, Identifiable, Equatable {
     var imageURL: String
     var description: String
     var bidEnd: Int
+    var price: Int = 100
     
     enum CodingKeys: String, CodingKey {
         case id = "id"

@@ -17,8 +17,7 @@ struct ItemsView: View {
     }
     
     var body: some View {
-        NavigationView {
-            List(viewModel.lotsList) { item in
+            List(appViewModel.allLots) { item in
                 NavigationLink(destination: {
                     ItemsDetailView(lotId: item.id)
                 }, label: {
@@ -35,7 +34,7 @@ struct ItemsView: View {
                                 .fontWeight(.semibold)
                                 .lineLimit(2)
                                 .minimumScaleFactor(0.5)
-                            Text("$100")
+                            Text("\(item.price)$")
                                 .foregroundColor(.green)
                                 .fontWeight(.semibold)
                                 .lineLimit(1)
@@ -43,11 +42,7 @@ struct ItemsView: View {
                         }
                     }
                 })
-            }
             .navigationTitle("NFT for sale")
-        }
-        .onAppear {
-            viewModel.fetchAllLots()
         }
         .onChange(of: viewModel.lotsList) { newValue in
             self.appViewModel.allLots = newValue

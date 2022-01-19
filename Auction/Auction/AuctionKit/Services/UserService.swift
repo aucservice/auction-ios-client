@@ -31,11 +31,11 @@ class UserService {
             }
     }
     
-    public func getAllUsers(_ callback: @escaping (Result<[UserAndLotsModel], Error>) -> Void) {
+    public func getAllUsers(_ callback: @escaping (Result<AllUsersModel, Error>) -> Void) {
         
         let endpoint = Endpoint.getAllUsers()
         
-        Network.makeRequest(type: [UserAndLotsModel].self, endpoint: endpoint)
+        Network.makeRequest(type: AllUsersModel.self, endpoint: endpoint)
             .eraseToAnyPublisher()
             .request { result in
                 switch result {

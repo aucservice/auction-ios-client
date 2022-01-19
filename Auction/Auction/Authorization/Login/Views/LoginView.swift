@@ -85,8 +85,23 @@ struct LoginView: View {
             }
         )
         .fullScreenCover(isPresented: $isLoggedIn) {
-            ItemsView()
-                .environmentObject(appViewModel)
+            TabView(selection: $appViewModel.selectedTab) {
+                NavigationView {
+                ItemsView()
+                    .environmentObject(appViewModel)
+                }
+                .tag(TabBarSection.list)
+                .tabItem {
+                    Image(systemName: "list.bullet")
+                }
+                
+                ProfileView()
+                    .environmentObject(appViewModel)
+                    .tag(TabBarSection.profile)
+                    .tabItem {
+                        Image(systemName: "person.crop.circle")
+                    }
+            }
         }
     }
 }

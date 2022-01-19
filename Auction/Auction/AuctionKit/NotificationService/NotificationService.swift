@@ -14,12 +14,15 @@ class LocalNotification {
     let notificationCenter = UNUserNotificationCenter.current()
 
     private init() {
-        notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, _) in
+            notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
 
-            guard granted else { return }
-            self.notificationCenter.getNotificationSettings { (settings) in
-                guard settings.authorizationStatus == .authorized else { return }
-            }
+                if granted {
+                    self.notificationCenter.getNotificationSettings { (settings) in
+                        guard settings.authorizationStatus == .authorized else { return }
+                    }
+                } else if let error = error {
+                    print(error.localizedDescription)
+                }
         }
     }
 
@@ -31,7 +34,7 @@ class LocalNotification {
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
 
-        let request = UNNotificationRequest(identifier: "notification", content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         notificationCenter.add(request) { (error) in
             print(error?.localizedDescription ?? "")
         }
@@ -45,7 +48,7 @@ class LocalNotification {
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
 
-        let request = UNNotificationRequest(identifier: "notification", content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         notificationCenter.add(request) { (error) in
             print(error?.localizedDescription ?? "")
         }

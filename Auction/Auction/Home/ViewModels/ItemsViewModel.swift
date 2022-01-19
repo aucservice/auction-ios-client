@@ -12,6 +12,10 @@ class ItemsViewModel: ObservableObject {
     
     @Published var lotsList = [LotModel]()
     
+    init() {
+        fetchAllLots()
+    }
+    
     func fetchAllLots() {
         LotService.shared.getAllLots { [weak self] result in
             guard let self = self else { return }

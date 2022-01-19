@@ -7,6 +7,15 @@
 
 import Foundation
 
+struct AllUsersModel: Codable {
+    var username: [String]
+    
+    enum CodingKeys: String, CodingKey {
+        case username = "users"
+    }
+}
+
+
 struct UserAndLotsModel: Codable {
     var username: String
     var lots: [LotModel]

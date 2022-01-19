@@ -17,10 +17,14 @@ final class SignalRService {
     
     private var allUsers = [UserModel]()
     
+    var lotsHasChanged: (([LotModel]) -> Void)? = nil
+    
     init() {
-        if let url = URL(string: "/auctionHub") {
+        if let url = URL(string: "https://auc-service.herokuapp.com/auctionhub") {
             connection = HubConnectionBuilder(url: url).withLogging(minLogLevel: .debug).build()
             // lot has changed
+            connection?.start()
+            
             connection?.on(method: "bid") { (userName: String, lotId: String, amount: Int) in
                 do {
                     self.handleSignal(lotId: lotId, userId: userName, price: amount)
@@ -42,10 +46,14 @@ final class SignalRService {
     
     func handleSignal(lotId: String, userId: String, price: Int) {
         guard let lot = allLots.first(where: { $0.id == lotId }),
-              let user = allUsers.first(where: { $0.username == userId })
+              let user = allUsers.first(where: { $0.username == userId }),
+              let lotIdx = allLots.firstIndex(of: lot)
         else {
             return
         }
+        
+        allLots[lotIdx] = LotModel(id: lot.id, title: lot.title, imageURL: lot.imageURL, description: lot.description, bidEnd: lot.bidEnd, price: price)
+        lotsHasChanged!(allLots)
         LocalNotification.shared.sendNotification(name: lot.title, price: price, username: user.username)
     }
     

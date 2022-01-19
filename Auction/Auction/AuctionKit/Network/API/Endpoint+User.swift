@@ -11,14 +11,20 @@ extension Endpoint {
     
     static func getUser(by id: String) -> Self {
         return Endpoint(baseURL: "https://auc-service.herokuapp.com",
-                        method: .get,
+                        method: .put,
                         path: "/Auction/user",
-                        body: ["username" : id])
+                        queryItems: ["name" : id].queryItems)
     }
     
     static func getAllUsers() -> Self {
+        guard let authToken = UserDefaults.standard.string(forKey: "authToken") else {
+            return Endpoint(baseURL: "https://auc-service.herokuapp.com",
+                            method: .get,
+                            path: "/Auction/users")
+        }
         return Endpoint(baseURL: "https://auc-service.herokuapp.com",
                         method: .get,
-                        path: "/Auction/users")
+                        path: "/Auction/users",
+                        queryItems: ["token" : authToken].queryItems)
     }
 }
