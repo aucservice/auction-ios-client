@@ -12,7 +12,7 @@ struct UserAndLotsModel: Codable {
     var lots: [LotModel]
     
     enum CodingKeys: String, CodingKey {
-        case username = "UserName"
-        case lots = "Lots"
+        case username = "username"
+        case lots = "lots"
     }
 }

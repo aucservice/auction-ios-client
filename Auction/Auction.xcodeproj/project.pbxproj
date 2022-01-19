@@ -27,6 +27,13 @@
 		D458FCC42796154C0067062E /* SignalRClient in Frameworks */ = {isa = PBXBuildFile; productRef = D458FCC32796154C0067062E /* SignalRClient */; };
 		D458FCC6279617470067062E /* ItemsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D458FCC5279617470067062E /* ItemsDetailView.swift */; };
 		D458FCC82796174C0067062E /* ItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D458FCC72796174C0067062E /* ItemsView.swift */; };
+		D4B401B72797F21C009A74B2 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B401B62797F21C009A74B2 /* AppViewModel.swift */; };
+		D4B401BA2797F7AF009A74B2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D4B401B92797F7AF009A74B2 /* Kingfisher */; };
+		D4B401BC2797F89F009A74B2 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B401BB2797F89F009A74B2 /* UserModel.swift */; };
+		D4B401BE2797FA6E009A74B2 /* LotService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B401BD2797FA6E009A74B2 /* LotService.swift */; };
+		D4B401C02797FA7D009A74B2 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B401BF2797FA7D009A74B2 /* UserService.swift */; };
+		D4B401C22797FC14009A74B2 /* Endpoint+Lot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B401C12797FC14009A74B2 /* Endpoint+Lot.swift */; };
+		D4B401C42797FECD009A74B2 /* Endpoint+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B401C32797FECD009A74B2 /* Endpoint+User.swift */; };
 		D4D6ED4B2794AE4F00057A3F /* AuctionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6ED4A2794AE4F00057A3F /* AuctionApp.swift */; };
 		D4D6ED4D2794AE4F00057A3F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6ED4C2794AE4F00057A3F /* LoginView.swift */; };
 		D4D6ED4F2794AE5000057A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D6ED4E2794AE5000057A3F /* Assets.xcassets */; };
@@ -55,6 +62,12 @@
 		D440088927973F37009316B1 /* UserAndLotsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAndLotsModel.swift; sourceTree = "<group>"; };
 		D458FCC5279617470067062E /* ItemsDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemsDetailView.swift; path = Auction/Home/ItemDetails/Views/ItemsDetailView.swift; sourceTree = SOURCE_ROOT; };
 		D458FCC72796174C0067062E /* ItemsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemsView.swift; path = Auction/Home/Views/ItemsView.swift; sourceTree = SOURCE_ROOT; };
+		D4B401B62797F21C009A74B2 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		D4B401BB2797F89F009A74B2 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		D4B401BD2797FA6E009A74B2 /* LotService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotService.swift; sourceTree = "<group>"; };
+		D4B401BF2797FA7D009A74B2 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		D4B401C12797FC14009A74B2 /* Endpoint+Lot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+Lot.swift"; sourceTree = "<group>"; };
+		D4B401C32797FECD009A74B2 /* Endpoint+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+User.swift"; sourceTree = "<group>"; };
 		D4D6ED472794AE4F00057A3F /* Auction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6ED4A2794AE4F00057A3F /* AuctionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionApp.swift; sourceTree = "<group>"; };
 		D4D6ED4C2794AE4F00057A3F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -69,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B401BA2797F7AF009A74B2 /* Kingfisher in Frameworks */,
 				D458FCC42796154C0067062E /* SignalRClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +95,8 @@
 			children = (
 				D440086227971BFA009316B1 /* Endpoint.swift */,
 				D440086C27972429009316B1 /* Endpoint+Auth.swift */,
+				D4B401C12797FC14009A74B2 /* Endpoint+Lot.swift */,
+				D4B401C32797FECD009A74B2 /* Endpoint+User.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -110,6 +126,7 @@
 				D440088527973DB3009316B1 /* BidModel.swift */,
 				D440088727973E79009316B1 /* LotModel.swift */,
 				D440088927973F37009316B1 /* UserAndLotsModel.swift */,
+				D4B401BB2797F89F009A74B2 /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -124,12 +141,14 @@
 			name = Auth;
 			sourceTree = "<group>";
 		};
-		D4400874279728A9009316B1 /* NetworkManagers */ = {
+		D4400874279728A9009316B1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				D4400875279728B7009316B1 /* AuthService.swift */,
+				D4B401BD2797FA6E009A74B2 /* LotService.swift */,
+				D4B401BF2797FA7D009A74B2 /* UserService.swift */,
 			);
-			path = NetworkManagers;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		D44008772797318C009316B1 /* UI */ = {
@@ -182,6 +201,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		D4B401B52797F20B009A74B2 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D4B401B62797F21C009A74B2 /* AppViewModel.swift */,
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
 		D4D6ED3E2794AE4F00057A3F = {
 			isa = PBXGroup;
 			children = (
@@ -201,11 +228,11 @@
 		D4D6ED492794AE4F00057A3F /* Auction */ = {
 			isa = PBXGroup;
 			children = (
-				D4E8403827975D2B00E28185 /* Profile */,
 				D4D6ED582794AE6500057A3F /* App */,
 				D4D6ED5A2794AE8600057A3F /* AuctionKit */,
 				D4D6ED5D2794AF0D00057A3F /* Home */,
 				D4D6ED5C2794AEA100057A3F /* Authorization */,
+				D4E8403827975D2B00E28185 /* Profile */,
 				D4D6ED592794AE6E00057A3F /* Resources */,
 				D4D6ED502794AE5000057A3F /* Preview Content */,
 			);
@@ -223,6 +250,7 @@
 		D4D6ED582794AE6500057A3F /* App */ = {
 			isa = PBXGroup;
 			children = (
+				D4B401B52797F20B009A74B2 /* viewModels */,
 				D4D6ED4A2794AE4F00057A3F /* AuctionApp.swift */,
 			);
 			path = App;
@@ -240,7 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				D44008772797318C009316B1 /* UI */,
-				D4400874279728A9009316B1 /* NetworkManagers */,
+				D4400874279728A9009316B1 /* Services */,
 				D440086E27972484009316B1 /* Models */,
 				D440086727971E45009316B1 /* SignalR */,
 				D440086427971D04009316B1 /* Extensions */,
@@ -350,6 +378,7 @@
 			name = Auction;
 			packageProductDependencies = (
 				D458FCC32796154C0067062E /* SignalRClient */,
+				D4B401B92797F7AF009A74B2 /* Kingfisher */,
 			);
 			productName = Auction;
 			productReference = D4D6ED472794AE4F00057A3F /* Auction.app */;
@@ -381,6 +410,7 @@
 			mainGroup = D4D6ED3E2794AE4F00057A3F;
 			packageReferences = (
 				D458FCC22796154C0067062E /* XCRemoteSwiftPackageReference "SignalR-Client-Swift" */,
+				D4B401B82797F7AF009A74B2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = D4D6ED482794AE4F00057A3F /* Products */;
 			projectDirPath = "";
@@ -408,23 +438,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B401C22797FC14009A74B2 /* Endpoint+Lot.swift in Sources */,
 				D440088227973353009316B1 /* AlertContent.swift in Sources */,
 				D440086B27971F71009316B1 /* SignalRModels.swift in Sources */,
+				D4B401C02797FA7D009A74B2 /* UserService.swift in Sources */,
+				D4B401B72797F21C009A74B2 /* AppViewModel.swift in Sources */,
 				D440088827973E79009316B1 /* LotModel.swift in Sources */,
 				D4400870279724A7009316B1 /* LoginModel.swift in Sources */,
 				D4400884279738E7009316B1 /* AuthResponse.swift in Sources */,
 				D440086327971BFA009316B1 /* Endpoint.swift in Sources */,
 				D440088A27973F37009316B1 /* UserAndLotsModel.swift in Sources */,
+				D4B401BC2797F89F009A74B2 /* UserModel.swift in Sources */,
 				D440087E279731DC009316B1 /* LoaderButton.swift in Sources */,
 				D4D6ED4D2794AE4F00057A3F /* LoginView.swift in Sources */,
 				D440087C279731CD009316B1 /* ProgressIndicator.swift in Sources */,
 				D4400876279728B7009316B1 /* AuthService.swift in Sources */,
+				D4B401BE2797FA6E009A74B2 /* LotService.swift in Sources */,
 				D440088627973DB3009316B1 /* BidModel.swift in Sources */,
 				D458FCC82796174C0067062E /* ItemsView.swift in Sources */,
 				D440086627971D18009316B1 /* Dictionary+Extension.swift in Sources */,
 				D440086027971BB0009316B1 /* Network.swift in Sources */,
 				D440087A279731AC009316B1 /* LoadingView.swift in Sources */,
 				D4E8403C27975D5200E28185 /* ProfileView.swift in Sources */,
+				D4B401C42797FECD009A74B2 /* Endpoint+User.swift in Sources */,
 				D4D6ED662794B4D000057A3F /* SignUpView.swift in Sources */,
 				D440086D27972429009316B1 /* Endpoint+Auth.swift in Sources */,
 				D440086927971E6F009316B1 /* SignalRService.swift in Sources */,
@@ -643,6 +679,14 @@
 				minimumVersion = 0.9.0;
 			};
 		};
+		D4B401B82797F7AF009A74B2 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -650,6 +694,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D458FCC22796154C0067062E /* XCRemoteSwiftPackageReference "SignalR-Client-Swift" */;
 			productName = SignalRClient;
+		};
+		D4B401B92797F7AF009A74B2 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4B401B82797F7AF009A74B2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

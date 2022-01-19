@@ -8,15 +8,20 @@
 import Foundation
 
 extension Endpoint {
-    // https://aucservice.fpmi.spiralarms.org
+    
     static func logIn(with model: LoginModel) -> Self {
         return Endpoint(baseURL: "https://aucservice.fpmi.spiralarms.org",
-                        method: .post, path: "/login", body: ["password": model.password,
-                                                            "username": model.username ])
+                        method: .post,
+                        path: "/login",
+                        body: ["password": model.password,
+                               "username": model.username ])
     }
 
     static func signUp(with model: SignupModel) -> Self {
-        return Endpoint(baseURL: "https://aucservice.fpmi.spiralarms.org", method: .post, path: "/register", body: ["username": model.username,
-                                                                      "password": model.password])
+        return Endpoint(baseURL: "https://aucservice.fpmi.spiralarms.org",
+                        method: .post,
+                        path: "/register",
+                        body: ["username": model.username,
+                               "password": model.password])
     }
 }

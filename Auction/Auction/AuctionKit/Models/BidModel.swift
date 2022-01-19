@@ -8,15 +8,15 @@
 import Foundation
 
 struct BidModel: Codable {
-    var lotId: Int
+    var lotId: String
     var userName: String
     var price: Int
     var time: Int
     
     enum CodingKeys: String, CodingKey {
-        case lotId = "Lot_Id"
-        case userName = "UserName"
-        case price = "Amount"
-        case time = "Timestamp"
+        case lotId = "lot_Id"
+        case userName = "username"
+        case price = "amount"
+        case time = "timestamp"
     }
 }
